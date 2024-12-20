@@ -1,0 +1,117 @@
+/* General styles for the whole page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2f2f2f; /* Grey background */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Game container styling */
+.game-container {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background for the container */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 400px;
+    max-width: 90%;
+}
+
+.title {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #f8cdda;
+}
+
+.game-info {
+    margin-bottom: 20px;
+}
+
+.message {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.reset-btn {
+    background-color: #ff4081;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset-btn:hover {
+    background-color: #f50057;
+}
+
+/* Styling for the Tic Tac Toe board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+/* Cell styling */
+.cell {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    background-color: #fff;
+    color: #444;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cell:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.cell.taken {
+    pointer-events: none;
+}
+
+/* Player-specific colors */
+.cell.x {
+    color: #ff4081; /* Player 1 color (X) */
+}
+
+.cell.o {
+    color: #42a5f5; /* Player 2 color (O) */
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .cell {
+        width: 90px;
+        height: 90px;
+        font-size: 28px;
+    }
+    
+    .reset-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
